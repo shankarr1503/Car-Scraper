@@ -1,0 +1,31 @@
+{
+  "actorSpecification": 2,
+  "name": "secure-sedan-car-scraper",
+  "title": "Secure Sedan Car Scraper",
+  "description": "Comprehensive sedan car details scraper with enterprise-grade security features",
+  "version": "4.0.0",
+  "meta": {
+    "templateId": "puppeteer_crawler",
+    "categories": ["scrapers", "automotive", "data-extraction"],
+    "isPublic": false,
+    "isAnonymized": true
+  },
+  "readme": "../README.md",
+  "dockerfile": "../Dockerfile",
+  "input": "./input_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  },
+  "secrets": {
+    "ENCRYPTION_KEY": {
+      "description": "Encryption key for sensitive data",
+      "type": "string",
+      "isOptional": true
+    },
+    "API_KEYS": {
+      "description": "Comma-separated API keys for external services",
+      "type": "string",
+      "isOptional": true
+    }
+  }
+}

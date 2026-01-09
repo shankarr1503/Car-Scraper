@@ -1,0 +1,43 @@
+{
+  "title": "Car Data Output Schema",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "$ref": "dataset_schema.json"
+      },
+      "description": "Array of car data objects"
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "total_records": {
+          "type": "integer",
+          "description": "Total number of records"
+        },
+        "processing_time": {
+          "type": "string",
+          "description": "Total processing time"
+        },
+        "success_rate": {
+          "type": "number",
+          "description": "Success rate percentage"
+        },
+        "security_audit": {
+          "type": "object",
+          "description": "Security audit information"
+        },
+        "data_quality_summary": {
+          "type": "object",
+          "description": "Data quality summary"
+        }
+      }
+    },
+    "security": {
+      "type": "object",
+      "description": "Security audit trail"
+    }
+  }
+}

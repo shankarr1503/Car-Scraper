@@ -1,0 +1,56 @@
+{
+  "name": "secure-sedan-car-scraper",
+  "version": "4.0.0",
+  "description": "Enterprise-grade secure sedan car scraper with advanced security features",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "dev": "NODE_ENV=development node src/main.js",
+    "test": "mocha tests/**/*.test.js --timeout 10000",
+    "test:security": "mocha tests/security.test.js --timeout 15000",
+    "lint": "eslint src/ scripts/ tests/ --ext .js",
+    "lint:fix": "eslint src/ scripts/ tests/ --ext .js --fix",
+    "security-check": "node scripts/security-check.js",
+    "security-setup": "node scripts/post-install.js",
+    "audit": "npm audit --production --audit-level=high",
+    "audit:fix": "npm audit fix --production",
+    "format": "prettier --write \"src/**/*.js\" \"scripts/**/*.js\" \"tests/**/*.js\"",
+    "precommit": "npm run lint && npm test",
+    "prepush": "npm run security-check",
+    "build": "docker build -t secure-car-scraper .",
+    "clean": "rm -rf node_modules coverage .apify_storage logs",
+    "postinstall": "npm run security-setup"
+  },
+  "keywords": [
+    "apify",
+    "scraper",
+    "cars",
+    "sedan",
+    "security",
+    "data-extraction"
+  ],
+  "author": "Secure Car Scraper Team",
+  "license": "ISC",
+  "dependencies": {
+    "apify": "^3.0.0",
+    "crawlee": "^3.0.0",
+    "puppeteer": "^21.0.0",
+    "user-agents": "^1.0.1070",
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "devDependencies": {
+    "mocha": "^10.0.0",
+    "chai": "^4.3.0",
+    "eslint": "^8.0.0",
+    "eslint-plugin-security": "^1.5.0",
+    "prettier": "^2.8.0",
+    "husky": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "apify": {
+    "name": "Secure Sedan Car Scraper"
+  }
+}

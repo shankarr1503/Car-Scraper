@@ -1,0 +1,92 @@
+{
+  "title": "Secure Car Scraper Configuration",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "vehicleType": {
+      "title": "Vehicle Type",
+      "type": "string",
+      "description": "Type of vehicle to scrape",
+      "default": "Sedan",
+      "enum": ["Sedan", "SUV", "Hatchback", "Coupe", "Sports car", "Crossover", "All"],
+      "editor": "select"
+    },
+    "manufacturers": {
+      "title": "Manufacturers",
+      "type": "array",
+      "description": "Specific manufacturers to scrape (empty for all)",
+      "editor": "stringList",
+      "prefill": []
+    },
+    "maxResults": {
+      "title": "Maximum Results",
+      "type": "integer",
+      "description": "Maximum number of cars to scrape",
+      "default": 200,
+      "maximum": 1000,
+      "minimum": 10
+    },
+    "country": {
+      "title": "Country",
+      "type": "string",
+      "description": "Country for pricing and specifications",
+      "default": "US",
+      "enum": ["US", "UK", "CA", "AU", "DE", "JP", "IN", "FR", "IT", "ES"]
+    },
+    "includeCompetitors": {
+      "title": "Competitor Analysis",
+      "type": "boolean",
+      "description": "Compare with similar models",
+      "default": true
+    },
+    "detailedSpecs": {
+      "title": "Detailed Specifications",
+      "type": "boolean",
+      "description": "Include comprehensive specifications",
+      "default": true
+    },
+    "scrapeReviews": {
+      "title": "Include Reviews",
+      "type": "boolean",
+      "description": "Scrape user and expert reviews",
+      "default": false
+    },
+    "securityLevel": {
+      "title": "Security Level",
+      "type": "string",
+      "description": "Security and privacy settings",
+      "default": "standard",
+      "enum": ["minimal", "standard", "strict", "stealth"],
+      "editor": "select"
+    },
+    "rateLimitDelay": {
+      "title": "Rate Limit Delay (ms)",
+      "type": "integer",
+      "description": "Delay between requests",
+      "default": 2000,
+      "maximum": 10000,
+      "minimum": 500
+    },
+    "encryptSensitiveData": {
+      "title": "Encrypt Sensitive Data",
+      "type": "boolean",
+      "description": "Encrypt personally identifiable information",
+      "default": true
+    },
+    "anonymizeData": {
+      "title": "Anonymize Data",
+      "type": "boolean",
+      "description": "Remove identifiable information",
+      "default": true
+    },
+    "dataSources": {
+      "title": "Data Sources",
+      "type": "array",
+      "description": "Sources to scrape from",
+      "default": ["google", "edmunds", "carscom", "kbb"],
+      "enum": ["google", "edmunds", "carscom", "kbb", "caranddriver", "motortrend"],
+      "editor": "stringList"
+    }
+  },
+  "required": ["vehicleType"]
+}
