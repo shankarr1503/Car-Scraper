@@ -1,0 +1,58 @@
+{
+  "name": "car-scraper",
+  "version": "1.0.0",
+  "description": "Secure car listing scraper with Apify integration",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "dev": "nodemon src/main.js",
+    "test": "jest",
+    "lint": "eslint src/",
+    "security": "npm audit",
+    "build": "echo 'Build complete'"
+  },
+  "keywords": [
+    "scraper",
+    "cars",
+    "apify",
+    "automation",
+    "data-extraction"
+  ],
+  "author": "Car Scraper Team",
+  "license": "MIT",
+  "dependencies": {
+    "apify": "^3.2.1",
+    "cheerio": "^1.0.0-rc.12",
+    "axios": "^1.6.7",
+    "puppeteer": "^22.0.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.30.1",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "apify": {
+    "runtime": "node",
+    "memoryMbytes": 1024,
+    "timeoutSecs": 3600
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/car-scraper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/username/car-scraper/issues"
+  },
+  "homepage": "https://github.com/username/car-scraper#readme"
+}

@@ -1,0 +1,80 @@
+{
+  "title": "Car Scraper",
+  "description": "Secure car listing scraper with advanced anti-detection features",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "startUrls": {
+      "title": "Start URLs",
+      "description": "URLs to begin scraping from",
+      "type": "array",
+      "editor": "stringList",
+      "prefill": [
+        "https://example-cars.com/listings"
+      ],
+      "minItems": 1,
+      "maxItems": 100
+    },
+    "maxPages": {
+      "title": "Maximum pages to scrape",
+      "description": "Limit the number of pages to scrape",
+      "type": "integer",
+      "default": 10,
+      "minimum": 1,
+      "maximum": 1000
+    },
+    "proxyType": {
+      "title": "Proxy type",
+      "description": "Type of proxy to use for requests",
+      "type": "string",
+      "enum": [
+        "residential",
+        "datacenter",
+        "google"
+      ],
+      "default": "residential"
+    },
+    "requestDelay": {
+      "title": "Request delay (ms)",
+      "description": "Delay between requests to avoid rate limiting",
+      "type": "integer",
+      "default": 2000,
+      "minimum": 1000,
+      "maximum": 10000
+    },
+    "useHeadless": {
+      "title": "Use headless browser",
+      "description": "Use Puppeteer for JavaScript-heavy sites",
+      "type": "boolean",
+      "default": false
+    },
+    "userAgent": {
+      "title": "Custom User Agent",
+      "description": "Custom user agent string (optional)",
+      "type": "string",
+      "default": ""
+    },
+    "maxRetries": {
+      "title": "Maximum retries",
+      "description": "Maximum number of retry attempts for failed requests",
+      "type": "integer",
+      "default": 3,
+      "minimum": 1,
+      "maximum": 10
+    },
+    "outputFormat": {
+      "title": "Output format",
+      "description": "Format for scraped data",
+      "type": "string",
+      "enum": [
+        "json",
+        "csv",
+        "xlsx"
+      ],
+      "default": "json"
+    }
+  },
+  "required": [
+    "startUrls"
+  ]
+}
