@@ -1,0 +1,13 @@
+{
+  "severity": {
+    "critical": "high",
+    "high": "high",
+    "medium": "medium",
+    "low": "low"
+  },
+  "ignore": {},
+  "patch": {
+    "enabled": true
+  },
+  "fail-on": "critical|high"
+}

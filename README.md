@@ -1,6 +1,6 @@
-# Secure Car Scraper
+# Secure Car Scraper 🚗🔒
 
-A production-ready car listing scraper built with Apify, featuring advanced security measures and anti-detection capabilities.
+Enterprise-grade secure web scraper for comprehensive car details with built-in security and privacy features. Built with Apify for production scalability.
 
 ## 🔒 Security Features
 
@@ -32,8 +32,8 @@ A production-ready car listing scraper built with Apify, featuring advanced secu
 
 ```bash
 # Clone the repository
-git clone https://github.com/username/car-scraper.git
-cd car-scraper
+git clone https://github.com/shankarr1503/Car-Scraper.git
+cd Car-Scraper
 
 # Install dependencies
 npm install

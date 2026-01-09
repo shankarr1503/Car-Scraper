@@ -1,0 +1,55 @@
+{
+  "title": "Car Dataset Schema",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "vehicle_type": {
+      "type": "string",
+      "description": "Type of vehicle"
+    },
+    "manufacturer": {
+      "type": "string",
+      "description": "Car manufacturer"
+    },
+    "model": {
+      "type": "string",
+      "description": "Car model name"
+    },
+    "year": {
+      "type": "integer",
+      "description": "Model year"
+    },
+    "price": {
+      "type": "object",
+      "description": "Pricing information"
+    },
+    "performance": {
+      "type": "object",
+      "description": "Performance specifications"
+    },
+    "features": {
+      "type": "array",
+      "description": "Car features and options"
+    },
+    "specifications": {
+      "type": "object",
+      "description": "Technical specifications"
+    },
+    "security_flags": {
+      "type": "array",
+      "description": "Security and privacy flags"
+    },
+    "data_quality": {
+      "type": "number",
+      "description": "Data quality score (0-100)"
+    },
+    "scraped_at": {
+      "type": "string",
+      "description": "Timestamp of scraping"
+    },
+    "data_hash": {
+      "type": "string",
+      "description": "Data integrity hash"
+    }
+  }
+}
